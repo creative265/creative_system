@@ -8,8 +8,8 @@ export default function ActionWidget({ onAddNote }: { onAddNote: (url: string) =
   const [hasDrawn, setHasDrawn] = useState(false);
 
   // ここでサイズを一括管理
-  const CANVAS_WIDTH = 330;
-  const CANVAS_HEIGHT = 330;
+  const CANVAS_WIDTH = 350;
+  const CANVAS_HEIGHT = 350;
 
   const handleClear = () => {
     canvasHandleRef.current?.clear();
