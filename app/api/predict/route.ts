@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-// あなたの ngrok URL
+// ngrok の URL (変更があればここを書き換えてください)
 const JETSON_URL = "https://tetrastichous-workless-marty.ngrok-free.dev/predict";
 
 export async function POST(request: Request) {
@@ -9,22 +9,24 @@ export async function POST(request: Request) {
     
     // ブラウザから届いた音声ファイルを取り出す
     const audioFile = formData.get('audio_file') as File;
+    
     if (!audioFile) {
+      console.error("Vercel Error: audio_file not found in browser request");
       return NextResponse.json({ error: "No audio file" }, { status: 400 });
     }
 
-    // Jetson (Flask) へ送るための新しい FormData を作成
+    // --- Jetson (Flask) へ送るための新しい箱(FormData)を作る ---
     const jetsonFormData = new FormData();
-    // Flask側の `request.files['audio_file']` に合わせる
+    
+    // server.py の request.files['audio_file'] に合わせて、音声のみを追加
+    // 画像ファイルはあえて追加せず、音声だけをパッキングします
     jetsonFormData.append('audio_file', audioFile, 'recording.wav');
 
-    console.log("Forwarding to Jetson via ngrok...");
+    console.log(`Forwarding ONLY audio to Jetson (Size: ${audioFile.size} bytes)`);
 
-    // Jetson へ POST リクエストを転送
     const response = await fetch(JETSON_URL, {
       method: 'POST',
       body: jetsonFormData,
-      // ngrok の無料枠で表示される「警告画面」をスキップするためのヘッダー
       headers: {
         'ngrok-skip-browser-warning': 'true'
       }
@@ -32,19 +34,20 @@ export async function POST(request: Request) {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Jetson (ngrok) Error: ${response.status} - ${errorText}`);
+      throw new Error(`Jetson Error: ${response.status} - ${errorText}`);
     }
 
     const result = await response.json();
     console.log("Result from Jetson:", result);
 
-    // Flask からのレスポンスを Next.js モーダルが期待する形式に変換
+    // Jetson(Flask)のレスポンス形式を、フロントのモーダル用に変換
+    // Flask側: normal, MCI, dementia, text, features...
     return NextResponse.json({
       status: "success",
-      healthy: (result.normal || 0) / 100, // 0.86 などの形式に
+      healthy: (result.normal || 0) / 100, 
       MCI: (result.MCI || 0) / 100,
       Dementia: (result.dementia || 0) / 100,
-      Conversation: result.text || "文字起こし失敗",
+      Conversation: result.text || "文字起こしなし",
       score: result.score || 0,
       details: {
         ttr: result.features?.ttr || 0,
