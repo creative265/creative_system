@@ -51,7 +51,7 @@ export default function HomePage() {
       const formData = new FormData();
       
       // 音声の追加
-      formData.append('audio_file', latestAudioBlob, 'recording.wav');
+      formData.append('file', latestAudioBlob, 'recording.wav');
       
       // 【修正ポイント1】最新の付箋は notes です
       const latestNote = notes[1];
