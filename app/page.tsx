@@ -54,7 +54,7 @@ export default function HomePage() {
       formData.append('file', latestAudioBlob, 'recording.wav');
       
       // 【修正ポイント1】最新の付箋は notes です
-      const latestNote = notes[1];
+      const latestNote = notes;
       console.log("画像取得開始:", latestNote.id);
 
       // 2. Vercel API への送信
