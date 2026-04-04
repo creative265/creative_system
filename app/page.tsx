@@ -57,11 +57,6 @@ export default function HomePage() {
       const latestNote = notes[1];
       console.log("画像取得開始:", latestNote.id);
 
-      // 画像をBlobに変換して追加
-      const resImg = await fetch(latestNote.imageUrl);
-      const imageBlob = await resImg.blob();
-      formData.append('image_file', imageBlob, 'drawing.png');
-
       // 2. Vercel API への送信
       console.log("Vercelへデータ送信中...");
       const response = await fetch('/api/predict', {
