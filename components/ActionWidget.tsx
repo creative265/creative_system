@@ -8,8 +8,8 @@ export default function ActionWidget({ onAddNote }: { onAddNote: (url: string) =
   const [hasDrawn, setHasDrawn] = useState(false);
 
   // ここでサイズを一括管理
-  const CANVAS_WIDTH = 550;
-  const CANVAS_HEIGHT = 350;
+  const CANVAS_WIDTH = 360;
+  const CANVAS_HEIGHT = 300;
 
   const handleClear = () => {
     canvasHandleRef.current?.clear();
@@ -40,7 +40,7 @@ export default function ActionWidget({ onAddNote }: { onAddNote: (url: string) =
       </div>
       
       {/* ボタンエリア */}
-      <div className="flex flex-row gap-3 flex-1 min-h-0">
+      <div className="flex flex-row gap-3 w-full h-24">
         <button 
           onClick={handleClear}
           disabled={!hasDrawn}

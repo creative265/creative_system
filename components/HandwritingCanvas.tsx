@@ -12,7 +12,7 @@ interface Props {
   height?: number; // 追加
 }
 
-export default forwardRef<HandwritingCanvasHandle, Props>(function HandwritingCanvas({ onStroke, width = 360, height = 400 }, ref) {
+export default forwardRef<HandwritingCanvasHandle, Props>(function HandwritingCanvas({ onStroke, width = 340, height = 300 }, ref) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
 
@@ -62,7 +62,7 @@ export default forwardRef<HandwritingCanvasHandle, Props>(function HandwritingCa
       ref={canvasRef}
       width={width}   // 親からの値を反映
       height={height} // 親からの値を反映
-      className="block cursor-crosshair touch-none bg-white"
+      className="block cursor-crosshair touch-none bg-white bg-white w-full h-auto rounded-xl"
       onMouseDown={startDrawing}
       onMouseMove={draw}
       onMouseUp={stopDrawing}
