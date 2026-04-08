@@ -40,7 +40,7 @@ export default function ActionWidget({ onAddNote }: { onAddNote: (url: string) =
       </div>
       
       {/* ボタンエリア */}
-      <div className="flex flex-row gap-3 w-full h-18">
+      <div className="flex flex-row gap-3 w-full h-15">
         <button 
           onClick={handleClear}
           disabled={!hasDrawn}
