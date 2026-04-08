@@ -40,11 +40,11 @@ export default function ActionWidget({ onAddNote }: { onAddNote: (url: string) =
       </div>
       
       {/* ボタンエリア */}
-      <div className="flex flex-row gap-3 w-full h-24">
+      <div className="flex flex-row gap-3 w-full h-18">
         <button 
           onClick={handleClear}
           disabled={!hasDrawn}
-          className={`flex-1 flex flex-col items-center justify-center gap-2 text-sm font-bold rounded-2xl transition-all border-2
+          className={`flex-1 flex flex-col items-center justify-center gap-1 text-sm font-bold rounded-2xl transition-all border-2
             ${hasDrawn ? 'bg-white border-gray-300 text-gray-500 active:scale-95' : 'bg-gray-100 text-gray-300 opacity-50'}`}
         >
           <Trash2 size={20} />
