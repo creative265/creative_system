@@ -82,7 +82,7 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="absolute inset-0 bg-transparent backdrop-blur-3xl"
+                className="absolute inset-0 bg-white/30 backdrop-blur-3xl"
                 onClick={() => setSelectedNote(null)} // 背景クリックで閉じる
               />
             {/* モーダル本体 */}
