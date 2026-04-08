@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Note } from '@/app/page';
 import { Trash2, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
 
 interface StickyNoteAreaProps {
   notes: Note[];
@@ -24,7 +24,7 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
   };
 
   return (
-    <>
+    <LayoutGroup>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 content-start">
         {notes.length === 0 ? (
           <div className="col-span-full flex flex-col items-center justify-center h-40 text-gray-400">
@@ -35,10 +35,11 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
           notes.map((note) => (
             <motion.div 
               key={note.id} 
+              layoutId={`card-${note.id}`}
               onClick={() => setSelectedNote(note)}
               whileHover={{ scale: 1.05, y: -8}}
               whileTap={{ scale: 0.97 }}
-              className="aspect-[360/300] bg-white-50 hover:bg-yellow-100 transition-colors rounded-lg shadow-sm border-l-4 border-yellow-400 p-3 flex flex-col cursor-pointer group"
+              className="aspect-[360/300] bg-white transition-colors rounded-3xl shadow-lg p-6 flex flex-col cursor-pointer group"
             >
               <div className="flex justify-between items-center mb-2">
                 {/* 保存日時 */}
@@ -52,19 +53,19 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
                     e.stopPropagation(); // プロの必須処理：親のonClick(拡大)を発火させない
                     onDeleteNote(note.id);
                   }}
-                  className="p-1.5 text-gray-400 hover:text-red-400 hover:bg-red-50 rounded-md opacity-0 group-hover:opacity-100 transition-all"
+                  className="p-1.5 text-gray-400 hover:text-red-400 hover:bg-red-50 rounded-xl opacity-0 group-hover:opacity-100 transition-all"
                   title="削除"
                 >
                   <Trash2 size={16} />
                 </button>
               </div>
               
-              <div className="flex-1 w-full relative rounded-2xl overflow-hidden pointer-events-none">
+              <div className="flex-1 w-full relative rounded-2xl overflow-hidden pointer-events-none border border-gray-50 bg-gray-50/50">
                 <motion.img 
                   layoutId={`image-${note.id}`}
                   src={note.imageUrl} 
                   alt="Handwritten note" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-coutain"
                 />
               </div>
             </motion.div>
@@ -76,32 +77,40 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
       <AnimatePresence>
         {selectedNote && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"> 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-3xl p-6"> 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="absolute inset-0 bg-white/30 backdrop-blur-2xl"
+                className="absolute inset-0 bg-white/30 backdrop-blur-3xl"
                 onClick={() => setSelectedNote(null)} // 背景クリックで閉じる
               />
             {/* モーダル本体 */}
             <motion.div 
               layoutId={`card-${selectedNote.id}`}
-              className="relative bg-white p-4 rounded-3xl w-fit max-w-[calc(92vh*360/300)] max-h-[92vh] flex flex-col shadow-2xl overflow-hidden z-10 border border-gray-100" // overflow-hidden を追加
+              className="relative bg-white p-4 rounded-3xl w-full max-w-[calc(92vh*360/300)] max-h-[92vh] flex flex-col shadow-2xl overflow-hidden z-10 border border-gray-100" // overflow-hidden を追加
               onClick={(e) => e.stopPropagation()} // 中身のクリックで閉じないようにする
             >
               {/* モーダルのヘッダー */}
-              <div className="flex justify-between items-center mb-4 px-2 shrink-0"> {/* shrink-0 を追加 */}
-                <span className="font-bold text-gray-700">
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                // 【修正】 mbを5に
+                className="flex justify-between items-center mb-5 px-1 shrink-0"
+              >
+                {/* 【修正】 text-2xlに */}
+                <span className="font-bold text-gray-800 text-2xl">
                   記録日時: {formatDateTime(selectedNote.timestamp)}
                 </span>
                 <button 
                   onClick={() => setSelectedNote(null)}
-                  className="p-1.5 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200 active:scale-95 transition-all"
+                  // 【修正】 roundedをxlに
+                  className="p-1.5 text-gray-500 bg-gray-100 rounded-xl hover:bg-gray-200 active:scale-95 transition-all"
                 >
-                  <X size={20} />
+                  <X size={28} />
                 </button>
-              </div>
+              </motion.div>
             
             {/* 拡大画像コンテナ */}
             {/* 修正：flex-1 と overflow-hidden を設定し、親コンテナの残りのスペースを使い切るようにする */}
@@ -111,18 +120,13 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
                   layoutId={`image-${selectedNote.id}`}
                     src={selectedNote.imageUrl} 
                     alt="Enlarged Note" 
-                    className="w-full h-full object-cover block" // プロの必須処理：contain で内に収める
-                  />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                  <span className="text-white text-sm font-medium drop-shadow-md">
-                    {formatDateTime(selectedNote.timestamp)}
-                  </span>
-                </div>
+                    className="w-full h-full object-contain block" // プロの必須処理：contain で内に収める
+                />
               </div>
             </motion.div>
           </div>
         )}
       </AnimatePresence>
-    </>
+    </LayoutGroup>
   );
 }
