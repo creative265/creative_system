@@ -123,7 +123,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="h-full flex flex-col pb-2 min-h-0 w-[550px] flex-shrink-0 gap-6">
+        <section className="h-full flex flex-col pb-2 min-h-0 w-[420px] flex-shrink-0 gap-6">
           <div className="flex-none bg-white p-4 rounded-[40px] border border-gray-200 shadow-sm">
             <ActionWidget onAddNote={handleAddNote} />
           </div>
