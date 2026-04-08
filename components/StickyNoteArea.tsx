@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Note } from '@/app/page';
 import { Trash2, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface StickyNoteAreaProps {
   notes: Note[];
@@ -32,10 +33,11 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
           </div>
         ) : (
           notes.map((note) => (
-            // 修正：カード全体をクリック可能(cursor-pointer)にし、ホバー時に少し浮くアニメーションを追加
-            <div 
+            <motion.div 
               key={note.id} 
               onClick={() => setSelectedNote(note)}
+              whileHover={{ scale: 1.03, y: -5}}
+              whileTap={{ scale: 0.98 }}
               className="aspect-[360/300] bg-yellow-50 hover:bg-yellow-100 transition-colors rounded-lg shadow-sm border-l-4 border-yellow-400 p-3 flex flex-col cursor-pointer group"
             >
               <div className="flex justify-between items-center mb-2">
@@ -58,60 +60,69 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
               </div>
               
               <div className="flex-1 w-full relative bg-white rounded border border-gray-100 overflow-hidden pointer-events-none">
-                <img 
+                <motion.img 
+                  layoutId={`image-${note.id}`}
                   src={note.imageUrl} 
                   alt="Handwritten note" 
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </motion.div>
           ))
         )}
       </div>
 
       {/* 拡大表示用のモーダル (Overlay) */}
-      {selectedNote && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" // p-8 -> p-4 に縮小
-          onClick={() => setSelectedNote(null)} // 背景クリックで閉じる
-        >
-          {/* モーダル本体 */}
+      <AnimatePresence>
+        {selectedNote && (
           <div 
-            // 修正：max-w-4xl を維持しつつ、max-h-[90vh] を追加して、モーダル自体が画面高さを越えないように制限
-            className="relative bg-white p-2 md:p-3 rounded-[2rem] w-fit max-w-[calc(90vh*360/300)] max-h-[90vh] flex flex-col shadow-2xl overflow-hidden" // overflow-hidden を追加
-            onClick={(e) => e.stopPropagation()} // 中身のクリックで閉じないようにする
-          >
-            {/* モーダルのヘッダー */}
-            <div className="flex justify-between items-center mb-4 px-2 shrink-0"> {/* shrink-0 を追加 */}
-              <span className="font-bold text-gray-700">
-                記録日時: {formatDateTime(selectedNote.timestamp)}
-              </span>
-              <button 
-                onClick={() => setSelectedNote(null)}
-                className="p-2 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200 active:scale-95 transition-all"
-              >
-                <X size={20} />
-              </button>
-            </div>
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"> 
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                onClick={() => setSelectedNote(null)} // 背景クリックで閉じる
+              />
+            {/* モーダル本体 */}
+            <motion.div 
+              layoutId={`card-${selectedNote.id}`}
+              className="relative bg-white p-2 md:p-3 rounded-[2rem] w-fit max-w-[calc(90vh*360/300)] max-h-[90vh] flex flex-col shadow-2xl overflow-hidden" // overflow-hidden を追加
+              onClick={(e) => e.stopPropagation()} // 中身のクリックで閉じないようにする
+            >
+              {/* モーダルのヘッダー */}
+              <div className="flex justify-between items-center mb-4 px-2 shrink-0"> {/* shrink-0 を追加 */}
+                <span className="font-bold text-gray-700">
+                  記録日時: {formatDateTime(selectedNote.timestamp)}
+                </span>
+                <button 
+                  onClick={() => setSelectedNote(null)}
+                  className="p-2 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200 active:scale-95 transition-all"
+                >
+                  <X size={20} />
+                </button>
+              </div>
             
             {/* 拡大画像コンテナ */}
             {/* 修正：flex-1 と overflow-hidden を設定し、親コンテナの残りのスペースを使い切るようにする */}
-            <div className="relative flex-1 w-full aspect-[360/300] bg-gray-50 rounded-xl overflow-hidden border border-gray-100"> {/* p-4 -> p-2 に縮小 */}
-              {/* 修正：max-w-full max-h-full と object-contain を設定 */}
-              <img 
-                src={selectedNote.imageUrl} 
-                alt="Enlarged Note" 
-                className="w-full h-full object-cover block" // プロの必須処理：contain で内に収める
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                <span className="text-white text-sm font-medium drop-shadow-md">
-                  {formatDateTime(selectedNote.timestamp)}
-                </span>
+              <div className="relative flex-1 w-full aspect-[360/300] bg-gray-50 rounded-xl overflow-hidden border border-gray-100"> {/* p-4 -> p-2 に縮小 */}
+                {/* 修正：max-w-full max-h-full と object-contain を設定 */}
+                <motion.img 
+                layoutId={`image-${selectedNote.id}`}
+                  src={selectedNote.imageUrl} 
+                  alt="Enlarged Note" 
+                  className="w-full h-full object-cover block" // プロの必須処理：contain で内に収める
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  <span className="text-white text-sm font-medium drop-shadow-md">
+                    {formatDateTime(selectedNote.timestamp)}
+                  </span>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </>
   );
 }
