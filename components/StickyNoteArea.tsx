@@ -39,7 +39,8 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
               onClick={() => setSelectedNote(note)}
               whileHover={{ scale: 1.05, y: -8}}
               whileTap={{ scale: 0.97 }}
-              className="aspect-[360/300] bg-white transition-colors rounded-3xl shadow-lg p-6 flex flex-col cursor-pointer group"
+              style={{ borderLeftColor: '#0f518a' }}
+              className="aspect-[360/300] bg-white transition-colors rounded-3xl shadow-lg border border-gray-100 border-l-[12px] p-6 flex flex-col cursor-pointer group"
             >
               <div className="flex justify-between items-center mb-2">
                 {/* 保存日時 */}
@@ -88,7 +89,8 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
             {/* モーダル本体 */}
             <motion.div 
               layoutId={`card-${selectedNote.id}`}
-              className="relative bg-white p-4 rounded-3xl w-full max-w-[calc(92vh*360/300)] max-h-[92vh] flex flex-col shadow-2xl overflow-hidden z-10 border border-gray-100" // overflow-hidden を追加
+              style={{ borderLeftColor: '#0f518a' }}
+              className="relative bg-white p-6 rounded-3xl w-full max-w-[calc(92vh*360/300)] max-h-[92vh] flex flex-col shadow-2xl overflow-hidden z-10 border border-gray-100 border-l-[16px]" // overflow-hidden を追加
               onClick={(e) => e.stopPropagation()} // 中身のクリックで閉じないようにする
             >
               {/* モーダルのヘッダー */}
