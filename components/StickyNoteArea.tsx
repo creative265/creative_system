@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Note } from '@/app/page';
 import { Trash2, X } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 interface StickyNoteAreaProps {
   notes: Note[];
@@ -97,28 +96,17 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
             
             {/* 拡大画像コンテナ */}
             {/* 修正：flex-1 と overflow-hidden を設定し、親コンテナの残りのスペースを使い切るようにする */}
-            <div className="relative mx-auto bg-gray-100 rounded-xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing
-                w-full max-w-[95vw] h-[70vh] md:h-[80vh]"> 
+            <div className="relative w-full aspect-[360/300] max-w-[800px] mx-auto bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden"> {/* p-4 -> p-2 に縮小 */}
               {/* 修正：max-w-full max-h-full と object-contain を設定 */}
-              <motion.div 
-                drag // ドラッグ移動を可能に
-                dragConstraints={{ left: -500, right: 500, top: -500, bottom: 500 }} // 画像サイズに応じて調整
-                dragElastic={0.1}
-                className="w-full h-full flex items-center justify-center"
-              >
-                <motion.img 
-                  src={selectedNote.imageUrl} 
-                  alt="Enlarged Note" 
-                  // 拡大率を制御（タップやホイールで scale を変更するロジックを組むとさらに良）
-                  whileHover={{ scale: 1.5 }} // ホバーするだけで1.5倍に
-                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  className="max-w-full max-h-full object-contain pointer-events-none"
-                />
-              </motion.div>
-
-              {/* 操作ガイド（プロの親切設計） */}
-              <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur px-3 py-1 rounded-full text-white text-xs pointer-events-none">
-                ドラッグで移動 / ホバーで拡大
+              <img 
+                src={selectedNote.imageUrl} 
+                alt="Enlarged Note" 
+                className="w-full h-full object-cover block" // プロの必須処理：contain で内に収める
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                <span className="text-white text-sm font-medium drop-shadow-md">
+                  {formatDateTime(selectedNote.timestamp)}
+                </span>
               </div>
             </div>
           </div>
