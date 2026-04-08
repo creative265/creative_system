@@ -96,7 +96,9 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
             
             {/* 拡大画像コンテナ */}
             {/* 修正：flex-1 と overflow-hidden を設定し、親コンテナの残りのスペースを使い切るようにする */}
-            <div className="relative w-full aspect-[360/300] max-w-[800px] mx-auto bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden"> {/* p-4 -> p-2 に縮小 */}
+            <div className="relative mx-auto bg-white rounded-3xl shadow-[0_20px_70px_rgba(0,0,0,0.3)] overflow-hidden animate-in fade-in zoom-in duration-300
+                w-full max-w-[90vw] md:max-w-[700px] lg:max-w-[900px] 
+                max-h-[80vh] aspect-[360/300]"> 
               {/* 修正：max-w-full max-h-full と object-contain を設定 */}
               <img 
                 src={selectedNote.imageUrl} 
