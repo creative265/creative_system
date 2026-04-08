@@ -36,7 +36,7 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
             <div 
               key={note.id} 
               onClick={() => setSelectedNote(note)}
-              className="aspect-square bg-yellow-50 hover:bg-yellow-100 transition-colors rounded-lg shadow-sm border-l-4 border-yellow-400 p-3 flex flex-col cursor-pointer group"
+              className="aspect-[360/300] bg-yellow-50 hover:bg-yellow-100 transition-colors rounded-lg shadow-sm border-l-4 border-yellow-400 p-3 flex flex-col cursor-pointer group"
             >
               <div className="flex justify-between items-center mb-2">
                 {/* 保存日時 */}
@@ -61,7 +61,7 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
                 <img 
                   src={note.imageUrl} 
                   alt="Handwritten note" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
           {/* モーダル本体 */}
           <div 
             // 修正：max-w-4xl を維持しつつ、max-h-[90vh] を追加して、モーダル自体が画面高さを越えないように制限
-            className="relative bg-white p-4 rounded-2xl w-fit max-h-[90vh] flex flex-col shadow-2xl overflow-hidden" // overflow-hidden を追加
+            className="relative bg-white p-2 md:p-3 rounded-[2rem] w-fit max-w-[calc(90vh*360/300)] max-h-[90vh] flex flex-col shadow-2xl overflow-hidden" // overflow-hidden を追加
             onClick={(e) => e.stopPropagation()} // 中身のクリックで閉じないようにする
           >
             {/* モーダルのヘッダー */}
@@ -96,7 +96,7 @@ export default function StickyNoteArea({ notes, onDeleteNote }: StickyNoteAreaPr
             
             {/* 拡大画像コンテナ */}
             {/* 修正：flex-1 と overflow-hidden を設定し、親コンテナの残りのスペースを使い切るようにする */}
-            <div className="relative w-full aspect-[360/300] max-w-[800px] mx-auto bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden"> {/* p-4 -> p-2 に縮小 */}
+            <div className="relative flex-1 w-full aspect-[360/300] bg-gray-50 rounded-xl overflow-hidden border border-gray-100"> {/* p-4 -> p-2 に縮小 */}
               {/* 修正：max-w-full max-h-full と object-contain を設定 */}
               <img 
                 src={selectedNote.imageUrl} 
