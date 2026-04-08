@@ -123,7 +123,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="h-full flex flex-col pb-2 min-h-0 w-[420px] flex-shrink-0 gap-6">
+        <section className="h-full flex flex-col pb-2 min-h-0 w-[420px] flex-shrink-0 gap-3">
           <div className="flex-none bg-white p-4 rounded-[40px] border border-gray-200 shadow-sm">
             <ActionWidget onAddNote={handleAddNote} />
           </div>
@@ -132,12 +132,12 @@ export default function HomePage() {
             <button
               onClick={handleAnalyze}
               disabled={isAnalyzing || !latestAudioBlob || notes.length === 0}
-              className={`w-full py-10 rounded-[40px] font-black text-4xl flex items-center justify-center gap-4 shadow-2xl transition-all active:scale-95
+              className={`w-full py-5 rounded-[40px] font-black text-4xl flex items-center justify-center gap-4 shadow-2xl transition-all active:scale-95
                 ${(!latestAudioBlob || notes.length === 0) 
                   ? 'bg-gray-100 text-gray-300 cursor-not-allowed border-2 border-dashed border-gray-200 shadow-none' 
                   : 'bg-gradient-to-br from-blue-600 to-indigo-700 text-white hover:shadow-blue-500/40 hover:-translate-y-1'}`}
             >
-              <Send size={40} />
+              <Send size={28} />
               <span>VocaSense 解析</span>
             </button>
 
