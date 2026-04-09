@@ -95,7 +95,7 @@ export default function HomePage() {
       {/* 1. 解析中オーバーレイ */}
       {isAnalyzing && (
         // 【修正ポイント2】z- と記述（括弧が必要）
-        <div className="fixed inset-0 z- bg-black/60 backdrop-blur-md flex flex-col items-center justify-center text-white">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex flex-col items-center justify-center text-white">
           <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mb-4" />
           <p className="text-xl font-bold tracking-widest animate-pulse">VocaSense 解析中...</p>
         </div>
@@ -123,7 +123,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="h-full flex flex-col pb-2 min-h-0 w-[420px] flex-shrink-0 gap-3">
+        <section className="h-full flex flex-col pb-2 min-h-0 w-[500px] flex-shrink-0 gap-3">
           <div className="flex-none bg-white p-4 rounded-[40px] border border-gray-200 shadow-sm">
             <ActionWidget onAddNote={handleAddNote} />
           </div>
