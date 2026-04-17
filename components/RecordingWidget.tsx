@@ -56,7 +56,13 @@ export default function RecordingWidget({ onStatusChange, onRecordingComplete }:
 
   const startRecording = async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const stream = await navigator.mediaDevices.getUserMedia({ 
+        audio: {
+          channelCount: 1, // ここでモノラルを指定
+          echoCancellation: true,
+          noiseSuppression: true
+        } 
+      });
       streamRef.current = stream;
 
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
