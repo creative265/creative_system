@@ -2,6 +2,7 @@
 import React from "react";
 import Link from 'next/link';
 import { Menu, X, Home, BarChart2 } from 'lucide-react';
+import { usePathname } from 'next/navigation'; // 1. インポートを確認
 
 interface SidebarProps {
   isOpen: boolean;
@@ -13,6 +14,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const linkBaseStyle = "flex items-center gap-3 p-4 rounded-2xl font-bold transition-colors cursor-pointer";
   const activeStyle = "bg-blue-50 text-blue-600";
   const inactiveStyle = "text-gray-500 hover:bg-gray-50";
+  const pathname = usePathname();
   // ---------------------------------------------------------
   return (
     <>
