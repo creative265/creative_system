@@ -37,9 +37,9 @@ const Analysis_demo = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => vo
               <h3 className="text-[10px] font-black text-slate-400 tracking-[0.2em] uppercase">PROBABILITY / 推論確率</h3>
               <div className="space-y-5 border-l-2 border-slate-100 pl-6">
                 {[
-                  { label: '健康', color: 'bg-emerald-500', width: 'w-[95%]' },
-                  { label: 'MCI', color: 'bg-amber-400', width: 'w-[4%]' },
-                  { label: '認知症', color: 'bg-rose-500', width: 'w-[1%]' }
+                  { label: '健康', color: 'bg-emerald-500', width: 'w-[8%]' },
+                  { label: 'MCI', color: 'bg-amber-400', width: 'w-[11%]' },
+                  { label: '認知症', color: 'bg-rose-500', width: 'w-[81%]' }
                 ].map((item) => (
                   <div key={item.label} className="group">
                     <div className="flex justify-between items-end mb-2">
@@ -60,10 +60,10 @@ const Analysis_demo = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => vo
             <div className="space-y-6">
               <h3 className="text-[10px] font-black text-slate-400 tracking-[0.2em] uppercase">DETAILED METRICS / 詳細指標</h3>
               <div className="grid grid-cols-2 gap-4">
-                <MetricCard icon={<Brain size={18}/>} label="語彙多様性" value="1.00" color="text-blue-500" />
+                <MetricCard icon={<Brain size={18}/>} label="語彙多様性" value="0.60" color="text-blue-500" />
                 <MetricCard icon={<Zap size={18}/>} label="発話速度" value="10.034" color="text-blue-500" />
                 <MetricCard icon={<Clock size={18}/>} label="沈黙率" value="19.3%" color="text-blue-500" />
-                <MetricCard icon={<Activity size={18}/>} label="抽象語率" value="0.0%" color="text-blue-500" />
+                <MetricCard icon={<Activity size={18}/>} label="抽象語率" value="23.0%" color="text-blue-500" />
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const Analysis_demo = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => vo
                TRANSCRIPTION / 発話内容
             </h3>
             <div className="bg-indigo-50/50 p-8 rounded-[24px] border border-indigo-100/50">
-              <p className="text-indigo-600 font-bold text-xl italic leading-relaxed text-center">「曲動もいい story」</p>
+              <p className="text-indigo-600 font-bold text-xl italic leading-relaxed text-center">「ほら、あそこの、あの人が持ってきた、あれがすごく良かったのよ。名前は何だったかな？、ええと、あれよ。」</p>
             </div>
           </div>
         </div>
