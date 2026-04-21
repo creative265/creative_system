@@ -61,6 +61,13 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               <Mic size={22} /> 
               <span>音声登録</span>
             </Link>
+            <button 
+          onClick={onShowDemo}
+          className="flex items-center gap-3 p-3 rounded-xl bg-indigo-600/10 text-indigo-400 border border-indigo-600/20 hover:bg-indigo-600/20 transition-all"
+        >
+          <PieChart size={20} />
+          <span className="text-sm font-bold text-white">解析レポート表示</span>
+        </button>
             
             <div className="flex items-center gap-3 p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition-colors cursor-pointer">
               <BarChart2 size={22} /> 
