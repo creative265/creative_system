@@ -93,4 +93,4 @@ const Analysis_demo = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => vo
   );
 };
 
-export default AnalysisReportModal;
+export default Analysis_demo;
