@@ -6,6 +6,7 @@ import StickyNoteArea from '@/components/StickyNoteArea';
 import ActionWidget from '@/components/ActionWidget';
 import RecordingWidget from '@/components/RecordingWidget';
 import AnalysisReportModal from '@/components/AnalysisReportModal';
+import Analysis_demo from '@/components/Analysis_demo';
 import { Send, Mic, PlusCircle, CheckCircle2 } from 'lucide-react';
 
 export type Note = {
@@ -166,6 +167,28 @@ export default function HomePage() {
           onClose={() => setAnalysisResult(null)} 
         />
       )}
+      
+      export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+  // レポート表示用のステート
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+
+  return (
+    <div className="flex min-h-screen bg-slate-50">
+      {/* サイドバーに「開く関数」を渡す */}
+      <Sidebar onShowDemo={() => setIsDemoOpen(true)} />
+
+      <main className="flex-1 relative">
+        {children}
+        
+        {/* レポートモーダル */}
+        <Analysis_demo 
+          isOpen={isDemoOpen} 
+          onClose={() => setIsDemoOpen(false)} 
+        />
+      </main>
+    </div>
+  );
+}
     </div>
   );
 }
