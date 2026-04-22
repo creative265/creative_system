@@ -1,0 +1,716 @@
+[
+  {
+    "id": 1,
+    "name": "鬼蔵",
+    "lat": 26.5866,
+    "lng": 127.9774,
+    "url": "https://maps.app.goo.gl/oor1sUqgkaDHiC6Q7"
+  },
+  {
+    "id": 2,
+    "name": "アガイ",
+    "lat": 26.591,
+    "lng": 127.977,
+    "url": "https://maps.app.goo.gl/j9biApH7R3Wu5pXE6"
+  },
+  {
+    "id": 3,
+    "name": "noel",
+    "lat": 26.5925,
+    "lng": 127.981,
+    "url": "https://maps.app.goo.gl/TCXew61YCG9WoFBJ9"
+  },
+  {
+    "id": 4,
+    "name": "ネオパーク",
+    "lat": 26.6023,
+    "lng": 127.9806,
+    "url": "https://maps.app.goo.gl/Qo9FcB75kPU3fgaT7"
+  },
+  {
+    "id": 5,
+    "name": "にぎり　こぶし",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/LDYVhX2cxfropRSo7"
+  },
+  {
+    "id": 6,
+    "name": "八重食堂",
+    "lat": 26.5898,
+    "lng": 127.9795,
+    "url": "https://maps.app.goo.gl/6MFfWpRBgKr1u22HA"
+  },
+  {
+    "id": 7,
+    "name": "島中華酒場　クルゥ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/oi58DaWsiERhdHvh9"
+  },
+  {
+    "id": 8,
+    "name": "アイスクリン＆パーラー　kafuu",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/bSQ2oipt5xf2MsVm8"
+  },
+  {
+    "id": 9,
+    "name": "おおしろそば",
+    "lat": 26.5905,
+    "lng": 127.982,
+    "url": "https://maps.app.goo.gl/dsgJEpLqHxYw6Avq7"
+  },
+  {
+    "id": 10,
+    "name": "小さな酒バル盃",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/du8bwHacNSRPDBsg9"
+  },
+  {
+    "id": 11,
+    "name": "大衆御苑 足立屋",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/2Fxj8CsnjvM6UkxJ6"
+  },
+  {
+    "id": 12,
+    "name": "オリオンハッピーパーク",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/RbzYnn6oxvjZjH2r7"
+  },
+  {
+    "id": 13,
+    "name": "和タコス",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/2rW5bZKeUQeLA4Kc7"
+  },
+  {
+    "id": 14,
+    "name": "大麦の番人",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/LiAKeTPLKJx7PQ9V9"
+  },
+  {
+    "id": 15,
+    "name": "麺やKEIJIRO 名護店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/AawsgaePzbmXfVaa7"
+  },
+  {
+    "id": 16,
+    "name": "宮里そば",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/TqBSaKAQR2wtb18n8"
+  },
+  {
+    "id": 17,
+    "name": "幸ちゃんそば",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/gesThmynr4pKb65f9"
+  },
+  {
+    "id": 18,
+    "name": "プチレストラン エメラルド",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/9pytd5669i75MKtX7"
+  },
+  {
+    "id": 19,
+    "name": "ゆきの",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/89CSFEWLft8WMzVm8"
+  },
+  {
+    "id": 20,
+    "name": "パティスリー ブール・ムー",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/D2jWJqGeymZVMpvcA"
+  },
+  {
+    "id": 21,
+    "name": "我流酒場まっかず 宮里店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/ZFKCuPSLSZv59nK48"
+  },
+  {
+    "id": 22,
+    "name": "居酒屋 おれん家",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/75QkV31GxgxkSzG47"
+  },
+  {
+    "id": 23,
+    "name": "島唄居酒屋結い唄",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/rUHqrsXHRQPeNdpa7"
+  },
+  {
+    "id": 24,
+    "name": "三國",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/u7B1B8J5Sdf9FjQ36"
+  },
+  {
+    "id": 25,
+    "name": "ジミーなご店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/1zFkR1rqRucFL1SF7"
+  },
+  {
+    "id": 26,
+    "name": "ライノナン&カレーハウス名護店/Rhino Naan and Curry House",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/1R4doZqg8bdmS2oZ8"
+  },
+  {
+    "id": 27,
+    "name": "まんぷく",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/LTmjPJKyJjL9CZLm7"
+  },
+  {
+    "id": 28,
+    "name": "和風亭　為又店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/T5QV62eKNTjb2vSw7"
+  },
+  {
+    "id": 29,
+    "name": "焼肉こうちゃん",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/jPSSTxTjQfoVhtDj6"
+  },
+  {
+    "id": 30,
+    "name": "豚骨ラーメンまる安",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/ipUZ3UiWw4c5HSF6A"
+  },
+  {
+    "id": 31,
+    "name": "フレンチソーキ専門店 Crab Noodle 3.0 名護店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/NPfR5ZviCiU8tv8t5"
+  },
+  {
+    "id": 32,
+    "name": "BRISKSTAND NAGO【ブリスクスタンド名護】",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/7mpMzwfptgkT1eH88"
+  },
+  {
+    "id": 33,
+    "name": "ＧｒｅｅｎＣａｆｅ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/NH52UZ1U2wfbXQkX9"
+  },
+  {
+    "id": 34,
+    "name": "アクセサリーパーツ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/FPE5by4AhVwyTu9e7"
+  },
+  {
+    "id": 35,
+    "name": "本格あぐーとんこつらーめん- ICHI the RAMEN",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/eLseCQczyHiM4q3V7"
+  },
+  {
+    "id": 36,
+    "name": "せいろ蒸しカフェあきはる",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/f239CfYUcdaqwHND6"
+  },
+  {
+    "id": 37,
+    "name": "グラスアート藍",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/iT5cBRjUMAjHLvzy9"
+  },
+  {
+    "id": 38,
+    "name": "むかしむかし",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/PjpsNpfuXKf5uR5V7"
+  },
+  {
+    "id": 39,
+    "name": "Cafe&雑貨 Southerly",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/NYYDPtyKJresmG5q6"
+  },
+  {
+    "id": 40,
+    "name": "CoCoらぁいす",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/UoNzrXSxkDad99abA"
+  },
+  {
+    "id": 41,
+    "name": "御菓子御殿 名護店（DINO恐竜PARKやんばる亜熱帯の森）",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/vAXzjCg56ytcYfNT9"
+  },
+  {
+    "id": 42,
+    "name": "ヤンバルンチャー 名護店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/5hrJwoxmiC24wEMv8"
+  },
+  {
+    "id": 43,
+    "name": "海喜食堂(海鮮料理みき食堂)",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/UmR2MSeBDyaYqguF8"
+  },
+  {
+    "id": 44,
+    "name": "そば屋 よしこ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/8qtYHRicLzXjfRYi6"
+  },
+  {
+    "id": 45,
+    "name": "祖堅商店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/d3Xvx9DBYHacR66j7"
+  },
+  {
+    "id": 46,
+    "name": "北の鮮魚便北海丼 本部店 hokkaidonmotobu",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/MwEbaDDsMV8g8cLF9"
+  },
+  {
+    "id": 47,
+    "name": "いこいの駅いずみ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/JxQDMN8hN2yB3Lpz5"
+  },
+  {
+    "id": 48,
+    "name": "山原そば",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/KczoLfZR24T1c1G4A"
+  },
+  {
+    "id": 49,
+    "name": "杜鵑草",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/2XgwGgEoeeyPJFvC8"
+  },
+  {
+    "id": 50,
+    "name": "ENTRO Cafe &Restaurant",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/xThypMeiQoRG9BmQ9"
+  },
+  {
+    "id": 51,
+    "name": "ERIZO",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/B3qi2f562G5AXrX96"
+  },
+  {
+    "id": 52,
+    "name": "てぃーだ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/LGiWAhf8hzUJzVzF8"
+  },
+  {
+    "id": 53,
+    "name": "A&W 名桜店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/s7sAyG27Rfgkmc8g7"
+  },
+  {
+    "id": 54,
+    "name": "soy me",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/cMM5BM5868AJfyJA8"
+  },
+  {
+    "id": 55,
+    "name": "森のガラス館",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/VaBzRjc77mzZPjyp6"
+  },
+  {
+    "id": 56,
+    "name": "Poke Boo",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/VaBzRjc77mzZPjyp6"
+  },
+  {
+    "id": 57,
+    "name": "ハンハンムマニ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/JGVzQ7K1xmDMnDGr8"
+  },
+  {
+    "id": 58,
+    "name": "キャプテンカンガルータコライス",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/7EiBaDSH7p32RzUE6"
+  },
+  {
+    "id": 59,
+    "name": "コローレ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/gUexP3k6sLem1QLq6"
+  },
+  {
+    "id": 60,
+    "name": "シーサイドカフェ ブルートリップ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/FcRj2ir8JRNfN6rXA"
+  },
+  {
+    "id": 61,
+    "name": "大昇（DAISHO）",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/BLNySEEocA9TGaPr7"
+  },
+  {
+    "id": 62,
+    "name": "玉家jr",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/5r2LAhS4WDMcBPUf9"
+  },
+  {
+    "id": 63,
+    "name": "ラックス",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": NaN
+  },
+  {
+    "id": 64,
+    "name": "パティスリー　ボンシャンス",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/uju55owCxcDrL9nj8"
+  },
+  {
+    "id": 65,
+    "name": "パンチョリーナ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/6X4VChVXr6TD9bXe6"
+  },
+  {
+    "id": 66,
+    "name": "アグー処 なご味",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/YXEVr3jUNnzkm9UY9"
+  },
+  {
+    "id": 67,
+    "name": "21世紀の森公園",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/mnyNwua3Kg5Xtiiy5"
+  },
+  {
+    "id": 68,
+    "name": "inno coffee shop",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/VMrBi7HNK5sbLK4x5"
+  },
+  {
+    "id": 69,
+    "name": "ひがし食堂",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/Fzrby2vy74U8nJyr8"
+  },
+  {
+    "id": 70,
+    "name": "ステーキハウス88Jr.名護店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/XMYByCpJtdSB77eVA"
+  },
+  {
+    "id": 71,
+    "name": "名護曲",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/Mokf3hjgJ9vaWDsP8"
+  },
+  {
+    "id": 72,
+    "name": "シママースと朝ごはん",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/qj1A3g9W6GDqYMB37"
+  },
+  {
+    "id": 73,
+    "name": "運天食堂",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/KLUunY9b6aJxJDBC6"
+  },
+  {
+    "id": 74,
+    "name": "ブルーシール　名護店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/TgYJFPkhyhR5UxcU9"
+  },
+  {
+    "id": 75,
+    "name": "タウンプラザかねひで なんぐすく桜市場",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/mXwWqZ7CwYxcAr85A"
+  },
+  {
+    "id": 76,
+    "name": "前田食堂",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/WmTrUsn8m2zqKJfHA"
+  },
+  {
+    "id": 77,
+    "name": "島豚七輪焼 満味",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/NskK2wrFRCQVnDf66"
+  },
+  {
+    "id": 78,
+    "name": "名護城公園",
+    "lat": 26.5895,
+    "lng": 127.9882,
+    "url": "https://maps.app.goo.gl/Lhija6nQwgpCy6fm8"
+  },
+  {
+    "id": 79,
+    "name": "名護城公園　展望台",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/4qWdZksyQoYK93rE6"
+  },
+  {
+    "id": 80,
+    "name": "沖縄家系ラーメン 沖名家 沖縄名護店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/Nf9zu5MqPLFvmXga8"
+  },
+  {
+    "id": 81,
+    "name": "民俗資料博物館",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/rFGVBsTmbrHgWpCy6"
+  },
+  {
+    "id": 82,
+    "name": "おきなわさんぽ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/iBWsJguTkWi7Q95s6"
+  },
+  {
+    "id": 83,
+    "name": "名護市営市場",
+    "lat": 26.5878,
+    "lng": 127.9785,
+    "url": "https://maps.app.goo.gl/XhSq2pT71LQU2NP3A"
+  },
+  {
+    "id": 84,
+    "name": "EGGダイビング",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/dnwTTzKufZgrj6eM8"
+  },
+  {
+    "id": 85,
+    "name": "名護博物館",
+    "lat": 26.5918,
+    "lng": 127.9782,
+    "url": "https://maps.app.goo.gl/LoMMTDtYhtLFc36i9"
+  },
+  {
+    "id": 86,
+    "name": "せせらぎ広場",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/wQx7CHiQPKnzf3hB8"
+  },
+  {
+    "id": 87,
+    "name": "轟の滝",
+    "lat": 26.5684,
+    "lng": 128.0069,
+    "url": "https://maps.app.goo.gl/7UKstVMwURVTDbSg7"
+  },
+  {
+    "id": 88,
+    "name": "羽地ダム",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/6VBSdh7bQmx7ig7ZA"
+  },
+  {
+    "id": 89,
+    "name": "百年古家 大家 うふやー",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/t75Hpjq9T6EkEHvA9"
+  },
+  {
+    "id": 90,
+    "name": "知名商店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/VvzWmYNh63tpCwog8"
+  },
+  {
+    "id": 91,
+    "name": "名護市役所",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/vHHpWJVPDCTCMnSy8"
+  },
+  {
+    "id": 92,
+    "name": "BANJAT Bouldering",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/YZtzKgiQWiYRHxu27"
+  },
+  {
+    "id": 93,
+    "name": "SEALIVING CAFE",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/cZEkp5Y8gmVLEFS86"
+  },
+  {
+    "id": 94,
+    "name": "むちぐすい",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/DMhYyQsMzePEjAN99"
+  },
+  {
+    "id": 95,
+    "name": "名護曲金満神社",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/H7H2tB42J2ceT8kn7"
+  },
+  {
+    "id": 96,
+    "name": "名護神社",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/mFpHvNJCN89pf1pY6"
+  },
+  {
+    "id": 97,
+    "name": "21世紀の森ビーチ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/iCWa69YgNiMcbpsCA"
+  },
+  {
+    "id": 98,
+    "name": "パイ工房おしゃれ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/qTfu3kNaWRPL6LCn8"
+  },
+  {
+    "id": 99,
+    "name": "尚風亭",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/pCaNmvjYPbW2HBVu7"
+  },
+  {
+    "id": 100,
+    "name": "味いちもんめ",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/KbRmFpLrQWavfUff6"
+  },
+  {
+    "id": 100,
+    "name": "ＪＡファーマーズマーケットやんばる",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/5aBH87YwrefXf2r46"
+  },
+  {
+    "id": 101,
+    "name": "白川商店",
+    "lat": 26.5915,
+    "lng": 127.9775,
+    "url": "https://maps.app.goo.gl/aWiiPrV549Wkc2Uc6"
+  }
+]
