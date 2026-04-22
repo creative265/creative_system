@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import spotsData from '../public/spots.json'; // JSON形式を想定
+import spotsData from '../public/nago_spots.json'; // JSON形式を想定
 
 const MapWidget = dynamic(() => import('@/components/MapWidget'), { 
   ssr: false,
